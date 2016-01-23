@@ -2,6 +2,10 @@
 {
     public interface ISimulation
     {
+        int Wavelength
+        {
+            get;
+        }
         bool Simulate();
     }
 }

@@ -4,11 +4,14 @@ namespace SimulationEngine
 {
     public class Simulation : ISimulation
     {
-        private int wavelength;
-
         public Simulation(int wavelength)
         {
-            this.wavelength = wavelength;
+            this.Wavelength = wavelength;
+        }
+
+        public int Wavelength
+        {
+            get;
         }
 
         public bool Simulate()

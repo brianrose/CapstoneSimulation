@@ -35,13 +35,17 @@ namespace SimulationUI
 
             foreach (var simulation in e.Simulations)
             {
-                this.listView1.Items.Add("Simulation");
+                this.listView1.Items.Add(simulation.Wavelength.ToString());
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            controller.AddSimulation(new Simulation(780));
+            int wavelength;
+            if (int.TryParse(this.textBox1.Text, out wavelength))
+            {
+                this.controller.AddSimulation(new Simulation(wavelength));
+            }
         }
     }
 }
