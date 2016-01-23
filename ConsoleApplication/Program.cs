@@ -26,7 +26,7 @@ namespace ConsoleApplication
                     }
                 }
 
-                var result = new Simulator().Simulate(wavelength);
+                var result = new Simulation.Simulation(wavelength).Simulate();
 
                 if (result)
                 {
