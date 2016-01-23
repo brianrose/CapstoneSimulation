@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using Simulation;
+using SimulationEngine;
 
 namespace ConsoleApplication
 {
@@ -26,7 +26,7 @@ namespace ConsoleApplication
                     }
                 }
 
-                var result = new Simulation.Simulation(wavelength).Simulate();
+                var result = new Simulation(wavelength).Simulate();
 
                 if (result)
                 {

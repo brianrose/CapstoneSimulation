@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Simulation
+namespace SimulationEngine
 {
     public class Simulation : ISimulation
     {
