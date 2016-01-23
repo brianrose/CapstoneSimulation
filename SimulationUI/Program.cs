@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimulationUI.Controller;
+using SimulationUI.Model;
 
 namespace SimulationUI
 {
@@ -16,7 +18,11 @@ namespace SimulationUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            
+            Form1 view = new Form1();
+            IModel model = new Model.Model();
+            IController controller = new Controller.Controller(view, model);
+            Application.Run(view);
         }
     }
 }
