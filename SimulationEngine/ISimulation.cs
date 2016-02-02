@@ -2,10 +2,10 @@
 {
     public interface ISimulation
     {
-        int Wavelength
-        {
-            get;
-        }
-        bool Simulate();
+        int Id { get; }
+        ISpecification[] Specifications { get; }
+        IProcessing[] Processings { get; }
+        void Simulate();
+        IProcessingResult[] Process();
     }
 }

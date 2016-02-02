@@ -14,7 +14,9 @@ namespace SimulationEngine
             get;
         }
 
-        public bool Simulate()
+        public int Id { get; }
+
+        public void Simulate()
         {
             throw new NotImplementedException();
         }
