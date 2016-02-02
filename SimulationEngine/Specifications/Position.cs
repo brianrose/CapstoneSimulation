@@ -1,4 +1,4 @@
-﻿namespace SimulationEngine
+﻿namespace SimulationEngine.Specifications
 {
     internal class Position
     {

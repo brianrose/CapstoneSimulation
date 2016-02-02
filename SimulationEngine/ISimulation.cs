@@ -1,4 +1,7 @@
-﻿namespace SimulationEngine
+﻿using SimulationEngine.Processing;
+using SimulationEngine.Specifications;
+
+namespace SimulationEngine
 {
     public interface ISimulation
     {
