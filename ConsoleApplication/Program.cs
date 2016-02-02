@@ -26,7 +26,7 @@ namespace ConsoleApplication
                     }
                 }
 
-                new Simulation(wavelength).Simulate();
+                //new Simulation(wavelength).Simulate();
 
                 Console.WriteLine("Simulation completed successfully.");
             }

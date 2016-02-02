@@ -6,16 +6,13 @@ namespace SimulationEngine
 {
     public class Simulation : ISimulation
     {
-        public Simulation(int wavelength)
+        public Simulation(int id, ISpecification[] specifications, params IProcessing[] processing)
         {
-            this.Wavelength = wavelength;
+            this.Id = id;
+            this.Specifications = specifications;
+            this.Processings = processing;
         }
-
-        public int Wavelength
-        {
-            get;
-        }
-
+        
         public int Id { get; }
         public ISpecification[] Specifications { get; }
         public IProcessing[] Processings { get; }

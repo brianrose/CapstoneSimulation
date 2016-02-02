@@ -1,6 +1,6 @@
 ﻿namespace SimulationEngine.Specifications
 {
-    internal class Position
+    public class Position
     {
         public double X { get; }
         public double Y { get; }
@@ -11,6 +11,11 @@
             this.X = x;
             this.Y = y;
             this.Z = z;
+        }
+
+        public override string ToString()
+        {
+            return $"x = {this.X} mm, y = {this.Y} mm, z = {this.Z} mm";
         }
     }
 }

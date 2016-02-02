@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.wavelengthTextBox = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,31 +37,33 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.powerTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.sourceXTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.sourceYTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.sourceZTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.detectorZTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.detectorYTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.detectorXTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.radiusTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.timeTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // wavelengthTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(56, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "780";
+            this.wavelengthTextBox.Location = new System.Drawing.Point(127, 23);
+            this.wavelengthTextBox.Name = "wavelengthTextBox";
+            this.wavelengthTextBox.Size = new System.Drawing.Size(56, 22);
+            this.wavelengthTextBox.TabIndex = 0;
+            this.wavelengthTextBox.Text = "780";
             // 
             // listView1
             // 
@@ -71,9 +73,9 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Location = new System.Drawing.Point(12, 139);
+            this.listView1.Location = new System.Drawing.Point(12, 209);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(758, 252);
+            this.listView1.Size = new System.Drawing.Size(758, 182);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -92,7 +94,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 119);
+            this.label1.Location = new System.Drawing.Point(12, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 3;
@@ -100,7 +102,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 93);
+            this.button1.Location = new System.Drawing.Point(12, 163);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -135,13 +137,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Power (mW)";
             // 
-            // textBox2
+            // powerTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(280, 23);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 22);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "150";
+            this.powerTextBox.Location = new System.Drawing.Point(280, 23);
+            this.powerTextBox.Name = "powerTextBox";
+            this.powerTextBox.Size = new System.Drawing.Size(56, 22);
+            this.powerTextBox.TabIndex = 6;
+            this.powerTextBox.Text = "150";
             // 
             // label5
             // 
@@ -152,13 +154,13 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "X";
             // 
-            // textBox3
+            // sourceXTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(365, 23);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(56, 22);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.Text = "75.7604835020458 ";
+            this.sourceXTextBox.Location = new System.Drawing.Point(365, 23);
+            this.sourceXTextBox.Name = "sourceXTextBox";
+            this.sourceXTextBox.Size = new System.Drawing.Size(56, 22);
+            this.sourceXTextBox.TabIndex = 8;
+            this.sourceXTextBox.Text = "75.7604835020458 ";
             // 
             // label6
             // 
@@ -169,13 +171,13 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Y";
             // 
-            // textBox4
+            // sourceYTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(450, 23);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(56, 22);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.Text = "66.9948002207114";
+            this.sourceYTextBox.Location = new System.Drawing.Point(450, 23);
+            this.sourceYTextBox.Name = "sourceYTextBox";
+            this.sourceYTextBox.Size = new System.Drawing.Size(56, 22);
+            this.sourceYTextBox.TabIndex = 10;
+            this.sourceYTextBox.Text = "66.9948002207114";
             // 
             // label7
             // 
@@ -186,13 +188,13 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Z";
             // 
-            // textBox5
+            // sourceZTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(535, 23);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(56, 22);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.Text = "168.218489512914";
+            this.sourceZTextBox.Location = new System.Drawing.Point(535, 23);
+            this.sourceZTextBox.Name = "sourceZTextBox";
+            this.sourceZTextBox.Size = new System.Drawing.Size(56, 22);
+            this.sourceZTextBox.TabIndex = 12;
+            this.sourceZTextBox.Text = "168.218489512914";
             // 
             // label8
             // 
@@ -203,13 +205,13 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Z";
             // 
-            // textBox6
+            // detectorZTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(535, 57);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(56, 22);
-            this.textBox6.TabIndex = 23;
-            this.textBox6.Text = "170.9";
+            this.detectorZTextBox.Location = new System.Drawing.Point(535, 57);
+            this.detectorZTextBox.Name = "detectorZTextBox";
+            this.detectorZTextBox.Size = new System.Drawing.Size(56, 22);
+            this.detectorZTextBox.TabIndex = 23;
+            this.detectorZTextBox.Text = "170.9";
             // 
             // label9
             // 
@@ -220,13 +222,13 @@
             this.label9.TabIndex = 22;
             this.label9.Text = "Y";
             // 
-            // textBox7
+            // detectorYTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(450, 57);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(56, 22);
-            this.textBox7.TabIndex = 21;
-            this.textBox7.Text = "79.89";
+            this.detectorYTextBox.Location = new System.Drawing.Point(450, 57);
+            this.detectorYTextBox.Name = "detectorYTextBox";
+            this.detectorYTextBox.Size = new System.Drawing.Size(56, 22);
+            this.detectorYTextBox.TabIndex = 21;
+            this.detectorYTextBox.Text = "79.89";
             // 
             // label10
             // 
@@ -237,13 +239,13 @@
             this.label10.TabIndex = 20;
             this.label10.Text = "X";
             // 
-            // textBox8
+            // detectorXTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(365, 57);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(56, 22);
-            this.textBox8.TabIndex = 19;
-            this.textBox8.Text = "175.34";
+            this.detectorXTextBox.Location = new System.Drawing.Point(365, 57);
+            this.detectorXTextBox.Name = "detectorXTextBox";
+            this.detectorXTextBox.Size = new System.Drawing.Size(56, 22);
+            this.detectorXTextBox.TabIndex = 19;
+            this.detectorXTextBox.Text = "175.34";
             // 
             // label12
             // 
@@ -263,42 +265,61 @@
             this.label13.TabIndex = 15;
             this.label13.Text = "Radius (mm)";
             // 
-            // textBox10
+            // radiusTextBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(103, 57);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(56, 22);
-            this.textBox10.TabIndex = 14;
-            this.textBox10.Text = "2";
+            this.radiusTextBox.Location = new System.Drawing.Point(103, 57);
+            this.radiusTextBox.Name = "radiusTextBox";
+            this.radiusTextBox.Size = new System.Drawing.Size(56, 22);
+            this.radiusTextBox.TabIndex = 14;
+            this.radiusTextBox.Text = "2";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(9, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 17);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Time Span (s)";
+            // 
+            // timeTextBox
+            // 
+            this.timeTextBox.Location = new System.Drawing.Point(112, 85);
+            this.timeTextBox.Name = "timeTextBox";
+            this.timeTextBox.Size = new System.Drawing.Size(56, 22);
+            this.timeTextBox.TabIndex = 26;
+            this.timeTextBox.Text = "3.e-09";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 403);
+            this.Controls.Add(this.timeTextBox);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.detectorZTextBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.detectorYTextBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.detectorXTextBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.radiusTextBox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.sourceZTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.sourceYTextBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.sourceXTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.powerTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.wavelengthTextBox);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -308,7 +329,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox wavelengthTextBox;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Label label1;
@@ -317,22 +338,24 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox powerTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox sourceXTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox sourceYTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox sourceZTextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox detectorZTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox detectorYTextBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox detectorXTextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox radiusTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox timeTextBox;
     }
 }
 

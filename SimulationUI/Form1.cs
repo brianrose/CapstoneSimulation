@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimulationEngine;
+using SimulationEngine.Specifications;
 using SimulationUI.Controller;
 using SimulationUI.Model;
 using SimulationUI.View;
@@ -41,11 +42,10 @@ namespace SimulationUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int wavelength;
-            if (int.TryParse(this.textBox1.Text, out wavelength))
+            var specifications = new List<ISpecification>()
             {
-                this.controller.AddSimulation(new Simulation(wavelength));
-            }
+                // TODO: Specifications
+            };
         }
     }
 }

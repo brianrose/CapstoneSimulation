@@ -2,7 +2,7 @@
 
 namespace SimulationEngine.Specifications
 {
-    class LedSpecification : ISpecification
+    public class LedSpecification : ISpecification
     {
         private IPhysicsEquationsProvider physicsEquationsProvider;
         private IFileSystemAgent fileSystemAgent;
@@ -23,7 +23,7 @@ namespace SimulationEngine.Specifications
             this.file = $"{simulationDirectory}/brain.inp";
         }
 
-        public string Display => "LED Specification";
+        public string Display => $"LED Specification: {this.Wavelength} nm, {this.Power} mW, {this.Position}";
 
         public void SetInput()
         {

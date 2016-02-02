@@ -2,13 +2,13 @@
 
 namespace SimulationEngine.Specifications
 {
-    class TimeSpecification : ISpecification
+    public class TimeSpecification : ISpecification
     {
         private IFileSystemAgent fileSystemAgent;
         private readonly string file;
 
         public TimeSpan TimeSpan { get; }
-        public string Display => this.TimeSpan.ToString();
+        public string Display => $"Timespan: {this.TimeSpan}";
 
         public TimeSpecification(TimeSpan timeSpan, string simulationDirectory, IFileSystemAgent fileSystemAgent)
         {

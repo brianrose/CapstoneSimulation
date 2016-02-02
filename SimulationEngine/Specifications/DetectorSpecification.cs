@@ -1,11 +1,11 @@
 ﻿namespace SimulationEngine.Specifications
 {
-    class DetectorSpecification : ISpecification
+    public class DetectorSpecification : ISpecification
     {
         private IFileSystemAgent fileSystemAgent;
         private string file;
 
-        public string Display { get; }
+        public string Display => $"Detector Specification: radius = {this.Radius} mm, {this.Position}";
         public int Radius { get; }
         public Position Position { get; }
 
