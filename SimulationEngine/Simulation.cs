@@ -15,8 +15,15 @@ namespace SimulationEngine
         }
 
         public int Id { get; }
+        public ISpecification[] Specifications { get; }
+        public IProcessing[] Processings { get; }
 
         public void Simulate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IProcessingResult[] Process()
         {
             throw new NotImplementedException();
         }

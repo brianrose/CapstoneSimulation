@@ -35,7 +35,7 @@ namespace SimulationUI
 
             foreach (var simulation in e.Simulations)
             {
-                this.listView1.Items.Add(simulation.Wavelength.ToString());
+                this.listView1.Items.Add(new ListViewItem());
             }
         }
 

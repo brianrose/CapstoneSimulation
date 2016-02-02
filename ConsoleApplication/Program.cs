@@ -26,16 +26,9 @@ namespace ConsoleApplication
                     }
                 }
 
-                var result = new Simulation(wavelength).Simulate();
+                new Simulation(wavelength).Simulate();
 
-                if (result)
-                {
-                    Console.WriteLine("Simulation completed successfully.");
-                }
-                else
-                {
-                    Console.WriteLine("There was a problem running a simulation.");
-                }
+                Console.WriteLine("Simulation completed successfully.");
             }
             catch (Exception ex)
             {

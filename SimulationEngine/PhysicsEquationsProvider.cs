@@ -12,5 +12,10 @@ namespace SimulationEngine
         {
             throw new NotImplementedException();
         }
+
+        public int PowerToPhotonsPerSecond(int power)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

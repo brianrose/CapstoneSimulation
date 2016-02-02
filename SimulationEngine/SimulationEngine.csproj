@@ -40,11 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFileSystemAgent.cs" />
+    <Compile Include="IPhysicsEquationsProvider.cs" />
+    <Compile Include="PhysicsEquationsProvider.cs" />
+    <Compile Include="Processing\IProcessing.cs" />
+    <Compile Include="Processing\IProcessingResult.cs" />
     <Compile Include="ISimulation.cs" />
-    <Compile Include="ISpecification.cs" />
-    <Compile Include="Position.cs" />
+    <Compile Include="Specifications\DetectorSpecification.cs" />
+    <Compile Include="Specifications\ISpecification.cs" />
+    <Compile Include="Specifications\LedSpecification.cs" />
+    <Compile Include="Specifications\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Simulation.cs" />
+    <Compile Include="Specifications\TimeSpecification.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

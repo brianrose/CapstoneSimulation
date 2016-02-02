@@ -2,11 +2,11 @@
 {
     internal class Position
     {
-        public int X { get; }
-        public int Y { get; }
-        public int Z { get; }
+        public double X { get; }
+        public double Y { get; }
+        public double Z { get; }
 
-        public Position(int x, int y, int z)
+        public Position(double x, double y, double z)
         {
             this.X = x;
             this.Y = y;
