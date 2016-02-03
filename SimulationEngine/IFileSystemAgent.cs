@@ -4,6 +4,7 @@
     {
         bool CheckMesh(string directory);
         void CreateMesh(string directory);
+        void CreateSimulationEnvironment(string directory);
         void RunSimulation(string directory);
         void WriteInput(string file, int line, int position, string data);
         string ReadInput(string file, int line, int position);

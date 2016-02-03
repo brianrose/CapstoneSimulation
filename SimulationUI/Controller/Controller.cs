@@ -28,6 +28,11 @@ namespace SimulationUI.Controller
             model.AddSimulation(simulation);
         }
 
+        public void RunSimulation(int id)
+        {
+            this.model.RunSimulation(id);
+        }
+
         public void ViewChanged(IView view, ViewEventArgs e)
         {
             this.model.AddSimulation(e.Simulation);

@@ -11,5 +11,6 @@ namespace SimulationUI.Model
     {
         void Attach(IModelObserver modelObserver);
         void AddSimulation(ISimulation simulation);
+        void RunSimulation(int id);
     }
 }

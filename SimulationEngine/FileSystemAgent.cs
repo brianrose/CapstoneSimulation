@@ -18,6 +18,11 @@ namespace SimulationEngine
             throw new NotImplementedException();
         }
 
+        public void CreateSimulationEnvironment(string directory)
+        {
+            throw new NotImplementedException();
+        }
+
         public void RunSimulation(string directory)
         {
             throw new NotImplementedException();

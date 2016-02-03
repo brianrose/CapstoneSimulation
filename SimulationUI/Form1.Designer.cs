@@ -55,6 +55,7 @@
             this.radiusTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.timeTextBox = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // wavelengthTextBox
@@ -75,7 +76,7 @@
             this.columnHeader2});
             this.listView1.Location = new System.Drawing.Point(12, 209);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(758, 182);
+            this.listView1.Size = new System.Drawing.Size(758, 153);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -290,11 +291,22 @@
             this.timeTextBox.TabIndex = 26;
             this.timeTextBox.Text = "3.e-09";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 368);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Run All";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 403);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.timeTextBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
@@ -356,6 +368,7 @@
         private System.Windows.Forms.TextBox radiusTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox timeTextBox;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimulationEngine;
+using SimulationEngine.Configuration;
 using SimulationUI.Controller;
 using SimulationUI.Model;
 
@@ -19,8 +21,8 @@ namespace SimulationUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            Form1 view = new Form1();
-            IModel model = new Model.Model();
+            Form1 view = new Form1(new FileSystemAgent(), new PhysicsEquationsProvider(), new Converter(), new Configuration());
+            IModel model = new Model.Model(new FileSystemAgent(), new Configuration());
             IController controller = new Controller.Controller(view, model);
             Application.Run(view);
         }

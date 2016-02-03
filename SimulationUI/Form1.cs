@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SimulationEngine;
+using SimulationEngine.Configuration;
 using SimulationEngine.Specifications;
 using SimulationUI.Controller;
 using SimulationUI.Model;
@@ -18,21 +19,32 @@ namespace SimulationUI
     public partial class Form1 : Form, IView, IModelObserver
     {
         private int simulationCount = 0;
-        private string simulationsDirectory = "simulations/";
 
         private IFileSystemAgent fileSystemAgent;
         private IPhysicsEquationsProvider physicsEquationsProvider;
         private IConverter converter;
+        private IConfiguration configuration;
 
         private IController controller;
         public event ViewHandler<IView> Changed;
 
+        public Form1(IFileSystemAgent fileSystemAgent, IPhysicsEquationsProvider physicsEquationsProvider,
+            IConverter converter, IConfiguration configuration)
+        {
+            this.fileSystemAgent = fileSystemAgent;
+            this.physicsEquationsProvider = physicsEquationsProvider;
+            this.converter = converter;
+            this.configuration = configuration;
+            InitializeComponent();
+        }
+
         public Form1()
         {
-            InitializeComponent();
             this.fileSystemAgent = new FileSystemAgent();
             this.physicsEquationsProvider = new PhysicsEquationsProvider();
             this.converter = new Converter();
+            this.configuration = new Configuration();
+            InitializeComponent();
         }
 
         public void SetController(IController controller)
@@ -61,14 +73,25 @@ namespace SimulationUI
                 double.Parse(sourceZTextBox.Text));
             var detectorPosition = new Position(double.Parse(detectorXTextBox.Text), double.Parse(detectorYTextBox.Text),
                 double.Parse(detectorZTextBox.Text));
-            var simulationDirectory = $"{this.simulationsDirectory}/{id}";
             var specifications = new ISpecification[]
             {
-                new LedSpecification(int.Parse(wavelengthTextBox.Text), int.Parse(powerTextBox.Text), ledPosition, simulationDirectory, this.physicsEquationsProvider, this.fileSystemAgent),
-                new DetectorSpecification(int.Parse(radiusTextBox.Text), detectorPosition, simulationDirectory, this.fileSystemAgent),
-                new TimeSpecification(converter.ParseTimeSpan(timeTextBox.Text), simulationDirectory, this.fileSystemAgent)
+                new LedSpecification(int.Parse(wavelengthTextBox.Text), int.Parse(powerTextBox.Text), ledPosition, this.configuration.SimulationDirectory(id), this.physicsEquationsProvider, this.fileSystemAgent),
+                new DetectorSpecification(int.Parse(radiusTextBox.Text), detectorPosition, this.configuration.SimulationDirectory(id), this.fileSystemAgent),
+                new TimeSpecification(converter.ParseTimeSpan(timeTextBox.Text), this.configuration.SimulationDirectory(id), this.fileSystemAgent)
             };
             this.controller.AddSimulation(new Simulation(id, specifications));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            foreach (var item in this.listView1.Items)
+            {
+                var listViewItem = item as ListViewItem;
+                if (listViewItem != null)
+                {
+                    this.controller.RunSimulation(int.Parse(listViewItem.Text));
+                }
+            }
         }
     }
 }
