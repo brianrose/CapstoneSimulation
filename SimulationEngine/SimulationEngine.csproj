@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converter.cs" />
+    <Compile Include="FileSystemAgent.cs" />
+    <Compile Include="IConverter.cs" />
     <Compile Include="IFileSystemAgent.cs" />
     <Compile Include="IPhysicsEquationsProvider.cs" />
     <Compile Include="PhysicsEquationsProvider.cs" />
